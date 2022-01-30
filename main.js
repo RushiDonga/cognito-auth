@@ -1,3 +1,5 @@
+console.log("main.js executed")
+
 const url = window.location.href
 const replacedURL = url.replace('#', '&')
 const finalURL = new URLSearchParams(replacedURL)
