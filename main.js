@@ -23,9 +23,10 @@ var params = {
 cognitoidentityserviceprovider.getUser(params, function(err, data) {
     if (err) 
     {
-        console.log(err);
-        console.log(accessToken);
-        console.log(idToken)
+        console.log("ERR " + err);
+        console.log("ERR STACK" + err.stack);
+        console.log("Access Token" + accessToken);
+        console.log("ID Token" + idToken)
         console.log("------------------------");
         // window.location.href = 'https://rushidonga.github.io/cognito-auth/'
     }
