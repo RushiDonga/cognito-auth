@@ -21,11 +21,12 @@ var params = {
 cognitoidentityserviceprovider.getUser(params, function(err, data) {
     if (err) 
     {
-        window.location.href = 'https://rushidonga.github.io/cognito-auth/'
+        // window.location.href = 'https://rushidonga.github.io/cognito-auth/'
     }
     else 
     {
         console.log(data);
+        echo(data)
         for(var i = 0; i < data.UserAttributes.length; i++)
         {
             if(data.UserAttributes[i].Name == 'name')
