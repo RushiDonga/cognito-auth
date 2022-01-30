@@ -21,7 +21,7 @@ var params = {
 cognitoidentityserviceprovider.getUser(params, function(err, data) {
     if (err) 
     {
-        window.location.href = 'https://parthtrambadiya.github.io/cognitoauth'
+        window.location.href = 'https://rushidonga.github.io/cognito-auth/get-in-touch.html'
     }
     else 
     {
