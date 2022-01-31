@@ -39,7 +39,6 @@ var sendData = (userName,email, Subject, description)=>{
             {
                 method: "GET", 
                 // body: JSON.stringify(data),
-                mode: 'cors',
                 headers: {
                     'Content-Type': 'application/json',
                     'authentication': accv,
