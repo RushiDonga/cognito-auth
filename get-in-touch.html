@@ -52,8 +52,8 @@
                     <form class="contact-form" id="contact-form" action="#">
                       <h4 class="content-title">Message Me</h4>
                       <div class="row">
-                        <div class="col-12 col-md-6 form-group"><input class="form-control"  type="text" name="name" placeholder="Name" required=""></div>
-                        <div class="col-12 col-md-6 form-group"><input class="form-control"  type="email" name="email" placeholder="Email" required="" ></div>
+                        <div class="col-12 col-md-6 form-group"><input id="userNameInput" class="form-control"  type="text" name="name" id="userName"></div>
+                        <div class="col-12 col-md-6 form-group"><input id="userEmailInput" class="form-control"  type="email" name="email"></div>
                         <div class="col-12 form-group"><input class="form-control"  type="text" name="subject" placeholder="Subject" required=""></div>
                         <div class="col-12 form-group form-message"><textarea class="form-control"  name="message" placeholder="Message" rows="5" required=""></textarea></div>
                         <div class="col-12 form-submit"><button class="btn button-main button-scheme"  type="submit">Send Message</button>
@@ -62,11 +62,12 @@
                       </div>
                     </form>
                   </div>
+
                   <!-- Contact info-->
                   <div class="col-12 col-lg-5">
                     <div class="contact-info">
-                      <h4 class="content-title">Contact Info</h4>
-                      <p class="info-description">Always available for working on AWS Projects if the right project comes along, Feel free to contact me!</p>
+                      <h4 class="content-title">Login Details</h4>
+                      <p class="info-description">Here are the login Details, fetched from AWS Cognito using AWS SDK for JavaScript</p>
                       <ul class="list-unstyled list-info">
                         <li>
                           <div class="media align-items-center"><span class="info-icon"><i class="icon ion-logo-ionic"></i></span>
@@ -75,20 +76,7 @@
                             </div>
                           </div>
                         </li>
-                        <li>
-                          <div class="media align-items-center"><span class="info-icon"><i class="icon ion-md-map"></i></span>
-                            <div class="media-body info-details">
-                              <h6 class="info-type">Location</h6><span class="info-value">Charotar University of Science and Technology</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="media align-items-center"><span class="info-icon"><i class="icon ion-md-call"></i></span>
-                            <div class="media-body info-details">
-                              <h6 class="info-type">Call Me</h6><span class="info-value"><a href="tel:+441632967704">+91 8160452829</a></span>
-                            </div>
-                          </div>
-                        </li>
+        
                         <li>
                           <div class="media align-items-center"><span class="info-icon"><i class="icon ion-md-send"></i></span>
                             <div class="media-body info-details">

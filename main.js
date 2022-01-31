@@ -1,5 +1,3 @@
-console.log("main.js executed")
-
 const url = window.location.href
 const replacedURL = url.replace('#', '&')
 const finalURL = new URLSearchParams(replacedURL)
@@ -23,19 +21,13 @@ var params = {
 cognitoidentityserviceprovider.getUser(params, function(err, data) {
     if (err) 
     {
-        console.log("ERR : " + err);
-        console.log("ERR STACK : " + err.stack);
-        console.log("Access Token : " + accessToken);
-        console.log("ID Token : " + idToken)
-        console.log("------------------------");
-        // window.location.href = 'https://rushidonga.github.io/cognito-auth/'
+        window.location.href = 'https://rushidonga.github.io/cognito-auth/'
     }
     else 
     {
         console.log(data);
-        console.log("***********************");
         for(var i = 0; i < data.UserAttributes.length; i++)
-        {
+        {   
             if(data.UserAttributes[i].Name == 'name')
             {
                 UserName = data.UserAttributes[i].Value;
@@ -51,8 +43,9 @@ cognitoidentityserviceprovider.getUser(params, function(err, data) {
         }
 
         document.getElementById('userName').innerHTML = UserName;
-        document.getElementById('userEmail').innerHTML = UserEmail;     
+        document.getElementById('userEmail').innerHTML = UserEmail;  
 
-        console.log("Executed");
+        document.getElementById('userNameInput').value =UserName;
+        document.getElementById('userEmailInput').value = UserEmail;    
     }
 });
