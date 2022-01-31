@@ -23,10 +23,10 @@ var params = {
 cognitoidentityserviceprovider.getUser(params, function(err, data) {
     if (err) 
     {
-        console.log("ERR " + err);
-        console.log("ERR STACK" + err.stack);
-        console.log("Access Token" + accessToken);
-        console.log("ID Token" + idToken)
+        console.log("ERR : " + err);
+        console.log("ERR STACK : " + err.stack);
+        console.log("Access Token : " + accessToken);
+        console.log("ID Token : " + idToken)
         console.log("------------------------");
         // window.location.href = 'https://rushidonga.github.io/cognito-auth/'
     }
@@ -43,13 +43,13 @@ cognitoidentityserviceprovider.getUser(params, function(err, data) {
             }
         }
 
-        // for(var j = 0; j < data.UserAttributes.length; j++)
-        // {
-        //     if(data.UserAttributes[j].Name == 'email')
-        //     {
-        //         UserEmail = data.UserAttributes[j].Value;
-        //     }
-        // }
+        for(var j = 0; j < data.UserAttributes.length; j++)
+        {
+            if(data.UserAttributes[j].Name == 'email')
+            {
+                UserEmail = data.UserAttributes[j].Value;
+            }
+        }
 
         document.getElementById('userName').innerHTML = UserName;
         document.getElementById('userEmail').innerHTML = UserEmail;     
