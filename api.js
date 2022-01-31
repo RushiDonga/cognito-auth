@@ -26,32 +26,41 @@ var sendData = (userName,email, Subject, description)=>{
     // };
 
 
-    // const response = await fetch('https://1ggzhz91t0.execute-api.ap-south-1.amazonaws.com/test/test', requestOptions)
-    //     .then(response => response.json())
-    //     .then(result => console.log(result))
-    //     .catch(error => console.log('error', error));
-
-    //     console.log(response)
-        
-    console.log("---------------")
-
-        fetch("https://1ggzhz91t0.execute-api.ap-south-1.amazonaws.com/test/test", 
-            {
-                method: "GET", 
-                // body: JSON.stringify(data),
-                mode: 'cors',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'authentication': accv,
-                }
+    const response = await fetch(
+        'https://1ggzhz91t0.execute-api.ap-south-1.amazonaws.com/test/test', 
+        {
+            method: "GET", 
+            // body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json',
+                'authentication': accv,
             }
-        ).then(response => response.json())
-        .then(data => {
-            console.log("Data : " + data)
-        })
-        .catch((err) => {
-            console.log("Error : " + err)
-        })
+        }
+    )
+        .then(response => response.json())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+
+        console.log(response)
+        
+    // console.log("---------------")
+
+    //     fetch("https://1ggzhz91t0.execute-api.ap-south-1.amazonaws.com/test/test", 
+    //         {
+    //             method: "GET", 
+    //             // body: JSON.stringify(data),
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //                 'authentication': accv,
+    //             }
+    //         }
+    //     ).then(response => response.json())
+    //     .then(data => {
+    //         console.log("Data : " + data)
+    //     })
+    //     .catch((err) => {
+    //         console.log("Error : " + err)
+    //     })
     
     // const myJson = await response.json(); 
     // console.log(myJson)
