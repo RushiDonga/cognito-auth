@@ -26,20 +26,21 @@ var sendData = async (userName,email, Subject, description)=>{
     // };
 
 
-    // const response = await fetch(
-    //     'https://1ggzhz91t0.execute-api.ap-south-1.amazonaws.com/test/test', 
-    //     {
-    //         method: "GET", 
-    //         // body: JSON.stringify(data),
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //             'authentication': accv,
-    //         }
-    //     }
-    // )
-    //     .then(response => response.json())
-    //     .then(result => console.log(result))
-    //     .catch(error => console.log('error', error));
+    const response = await fetch(
+        'https://1ggzhz91t0.execute-api.ap-south-1.amazonaws.com/test/test', 
+        {
+            method: "GET", 
+            // body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json',
+                'authentication': accv,
+                'Access-Control-Allow-Origin': '*'
+            }
+        }
+    )
+        .then(response => response.json())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
 
-    //     console.log(response)
+        console.log(response)
 }
