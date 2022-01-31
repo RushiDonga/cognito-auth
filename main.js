@@ -34,7 +34,6 @@ cognitoidentityserviceprovider.getUser(params, function(err, data) {
     {
         console.log(data);
         console.log("***********************");
-        echo(data)
         for(var i = 0; i < data.UserAttributes.length; i++)
         {
             if(data.UserAttributes[i].Name == 'name')
@@ -53,5 +52,7 @@ cognitoidentityserviceprovider.getUser(params, function(err, data) {
 
         document.getElementById('userName').innerHTML = UserName;
         document.getElementById('userEmail').innerHTML = UserEmail;     
+
+        console.log("Executed");
     }
 });
