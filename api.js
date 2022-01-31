@@ -12,18 +12,18 @@ var sendData = (userName,email, Subject, description)=>{
     console.log(description)
 
 
-    // fetch(
-    //     'https://1ggzhz91t0.execute-api.ap-south-1.amazonaws.com/test/test', 
-    //     {
-    //         method: "GET", 
-    //         // body: JSON.stringify(data),
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //             'authentication': api_access_token
-    //           }
-    //     }
-    // )
-    //     .then(response => response.json())
-    //     .then(result => console.log(result))
-    //     .catch(error => console.log('error', error));
+    fetch(
+        'https://1ggzhz91t0.execute-api.ap-south-1.amazonaws.com/test/test', 
+        {
+            method: "GET", 
+            // body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json',
+                'authentication': api_access_token
+              }
+        }
+    )
+        .then(response => response.json())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
 }
