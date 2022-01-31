@@ -52,11 +52,19 @@
                     <form class="contact-form" id="contact-form" action="#">
                       <h4 class="content-title">Message Me</h4>
                       <div class="row">
-                        <div class="col-12 col-md-6 form-group"><input id="userNameInput" class="form-control"  type="text" name="name" id="userName"></div>
-                        <div class="col-12 col-md-6 form-group"><input id="userEmailInput" class="form-control"  type="email" name="email"></div>
-                        <div class="col-12 form-group"><input class="form-control"  type="text" name="subject" placeholder="Subject" required=""></div>
-                        <div class="col-12 form-group form-message"><textarea class="form-control"  name="message" placeholder="Message" rows="5" required=""></textarea></div>
-                        <div class="col-12 form-submit"><button class="btn button-main button-scheme"  type="submit">Send Message</button>
+                        <div class="col-12 col-md-6 form-group"><input id="userNameInput" class="form-control" placeholder="User Name" type="text" name="name" id="userName"></div>
+                        <div class="col-12 col-md-6 form-group"><input id="userEmailInput" class="form-control" placeholder="E-mail" type="email" name="email"></div>
+                        <div class="col-12 form-group"><input id="userSubject" class="form-control"  type="text" name="subject" placeholder="Subject" required=""></div>
+                        <div class="col-12 form-group form-message"><textarea id="userDescription" class="form-control"  name="message" placeholder="Message" rows="5" required=""></textarea></div>
+                        
+
+                        <!-- Button on Click Event -->
+                        <div class="col-12 form-submit">
+                          <button 
+                            onclick="sendData(document.getElementById('userNameInput'), document.getElementById('userEmailInput'), document.getElementById('userSubject'), document.getElementById('userDescription'))" 
+                            class="btn button-main button-scheme"  type="submit">
+                            Send Message
+                          </button>
                           <p class="contact-feedback"></p>
                         </div>
                       </div>
@@ -96,6 +104,8 @@
 
     <!--AWS SDK for javascript-->
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.834.0.min.js"></script>
+
+    <script src="api.js"></script>
 
     <script src="main.js"></script>
 
