@@ -13,10 +13,15 @@ var sendData = (userName,email, Subject, description)=>{
 
 
     fetch(
-        'https://1ggzhz91t0.execute-api.ap-south-1.amazonaws.com/test/test', 
+        'https://mahtd90zi6.execute-api.ap-south-1.amazonaws.com/prod/put-data', 
         {
-            method: "GET", 
-            // body: JSON.stringify(data),
+            method: "POST", 
+            body: {
+                "name": "Rushi Donga",
+                "email": "rushi.donga.04@gmail.com",
+                "subject":"This is a test Subject",
+                "description":"This is a test description"
+            },
             headers: {
                 'Content-Type': 'application/json',
                 'authentication': api_access_token
