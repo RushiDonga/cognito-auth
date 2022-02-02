@@ -23,6 +23,13 @@ var sendData = (userName,email, subject, description)=>{
         }
     )
         .then(response => response.json())
-        .then(result => console.log(result))
+        .then(result => {
+            if(result['statusCode'] == 200){
+                alert("Successfully Sent the Message")
+            }else{
+                alert("Error in sending message")
+                alert(result)
+            }
+        })
         .catch(error => console.log('error', error));
 }
