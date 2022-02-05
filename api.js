@@ -7,9 +7,9 @@ var api_access_token = apiFinalURL.get('access_token')
 var sendData = (userName,email, subject, description)=>{
 
     fetch(
-        'https://mahtd90zi6.execute-api.ap-south-1.amazonaws.com/prod/put-data', 
+        'https://t5pju98dna.execute-api.us-east-1.amazonaws.com/test/test', 
         {
-            method: "POST", 
+            method: "GET", 
             body: JSON.stringify({
                 "name": userName,
                 "email": email,
