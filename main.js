@@ -21,8 +21,8 @@ var params = {
 cognitoidentityserviceprovider.getUser(params, function(err, data) {
     if (err) 
     {
-        // Home Page URL
-        window.location.href = ''
+        // Error Occured
+        window.location.href = 'https://rushidonga.github.io/cognito-auth/'
     }
     else 
     {
@@ -44,10 +44,10 @@ cognitoidentityserviceprovider.getUser(params, function(err, data) {
             }
         }
 
-        // document.getElementById('userName').innerHTML = UserName;
-        // document.getElementById('userEmail').innerHTML = UserEmail;  
+        document.getElementById('userName').innerHTML = UserName;
+        document.getElementById('userEmail').innerHTML = UserEmail;  
 
-        // document.getElementById('userNameInput').value =UserName;
-        // document.getElementById('userEmailInput').value = UserEmail;    
+        document.getElementById('userNameInput').value =UserName;
+        document.getElementById('userEmailInput').value = UserEmail;    
     }
 });
