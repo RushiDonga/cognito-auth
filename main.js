@@ -21,7 +21,8 @@ var params = {
 cognitoidentityserviceprovider.getUser(params, function(err, data) {
     if (err) 
     {
-        window.location.href = 'https://rushidonga.github.io/cognito-auth/'
+        // Home Page URL
+        window.location.href = ''
     }
     else 
     {
