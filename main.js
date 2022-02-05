@@ -5,7 +5,7 @@ var accessToken = finalURL.get('access_token')
 var idToken = finalURL.get("id_token")
 var UserName, UserEmail;
 
-aws_region = 'ap-south-1';
+aws_region = 'us-east-1';
 AWS.config.region = aws_region; 
 
 AWS.config.apiVersions = {
@@ -44,10 +44,10 @@ cognitoidentityserviceprovider.getUser(params, function(err, data) {
             }
         }
 
-        document.getElementById('userName').innerHTML = UserName;
-        document.getElementById('userEmail').innerHTML = UserEmail;  
+        // document.getElementById('userName').innerHTML = UserName;
+        // document.getElementById('userEmail').innerHTML = UserEmail;  
 
-        document.getElementById('userNameInput').value =UserName;
-        document.getElementById('userEmailInput').value = UserEmail;    
+        // document.getElementById('userNameInput').value =UserName;
+        // document.getElementById('userEmailInput').value = UserEmail;    
     }
 });
