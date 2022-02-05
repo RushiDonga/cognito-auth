@@ -29,6 +29,8 @@ cognitoidentityserviceprovider.getUser(params, function(err, data) {
 
         UserName = data.Username.Value
 
+        console.log(UserName)
+
         // for(var i = 0; i < data.UserAttributes.length; i++)
         // {   
         //     if(data.UserAttributes[i].Name == 'name')
