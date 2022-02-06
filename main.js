@@ -5,6 +5,7 @@ var accessToken = finalURL.get('access_token')
 var idToken = finalURL.get("id_token")
 var UserName, UserEmail;
 
+// Change - Your region
 aws_region = 'ap-south-1';
 AWS.config.region = aws_region; 
 
@@ -21,6 +22,7 @@ var params = {
 cognitoidentityserviceprovider.getUser(params, function(err, data) {
     if (err) 
     {
+        // Change - Link to the Home Page
         window.location.href = 'https://rushidonga.github.io/cognito-auth/'
     }
     else 

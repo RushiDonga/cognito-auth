@@ -4,6 +4,8 @@ import uuid
 
 # Create DynamoDB resource
 dynamodb = boto3.resource('dynamodb')
+
+# Change - the name of the DynamoDB table
 table = dynamodb.Table('get-in-touch-table')
 
 # Create an SNS Client
@@ -45,6 +47,8 @@ def handle_sns(id, event):
         )
         
     client_sns.publish(
+
+        # Change - the ARN to the ARN of your SNS
         TopicArn='arn:aws:sns:ap-south-1:937726284102:Get-in-touch-SNS',
         Message= sns_message,
         Subject= event['subject']

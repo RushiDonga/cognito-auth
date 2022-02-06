@@ -1,5 +1,5 @@
 const apiUrl = window.location.href
-const apiReplacedURL = apiUrl.replace('@', '&')
+const apiReplacedURL = apiUrl.replace('#', '&')
 const apiFinalURL = new URLSearchParams(apiReplacedURL)
 
 var api_access_token = apiFinalURL.get('access_token')
@@ -7,9 +7,10 @@ var api_access_token = apiFinalURL.get('access_token')
 var sendData = (userName,email, subject, description)=>{
 
     fetch(
-        'https://t5pju98dna.execute-api.us-east-1.amazonaws.com/test/test', 
+        // Change - Your API here
+        'https://mahtd90zi6.execute-api.ap-south-1.amazonaws.com/prod', 
         {
-            method: "GET", 
+            method: "POST", 
             body: JSON.stringify({
                 "name": userName,
                 "email": email,
