@@ -79,6 +79,8 @@ section::before
 .sci
 {
     position: absolute;
+    height: 30px;
+    width: 30px;
     bottom: 50px;
     right: 100px;
     display: flex;
@@ -87,6 +89,12 @@ section::before
     flex-direction: column;
     filter: invert(1);
 }
+
+.sci-small{
+    height: 2em;
+    width: 2em;
+}
+
 .sci li
 {
     list-style: none;
