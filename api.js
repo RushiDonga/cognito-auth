@@ -10,7 +10,7 @@ var sendData = (userName,email, subject, description)=>{
         // Change - Your API here
         'https://6opq0ovib2.execute-api.ap-south-1.amazonaws.com/test/test', 
         {
-            method: "POST", 
+            method: "GET", 
             body: JSON.stringify({
                 "name": userName,
                 "email": email,
