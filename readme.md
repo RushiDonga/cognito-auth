@@ -13,6 +13,7 @@
 	 Send an email to the developer, if the API is involed using SNS.
 
 # Youtube Video Link
+[link](https://www.youtube.com/watch?v=BRwSBsMIs2I)
 
 # AWS Services used
 	AWS Cognito
